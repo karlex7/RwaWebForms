@@ -1,0 +1,161 @@
+﻿body {
+    font-family: 'Segoe UI';
+    background-color: #efefef;
+}
+
+h1 {
+    font-weight: 100;
+    text-align: center;
+}
+
+
+.repoInfo {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.mainContainer {
+    /*width: 1010px;*/
+    /*min-height: 300px;*/
+    margin: 30px auto 0;
+    border: 0px solid #ccc;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px;
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+tr > th {
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+th {
+    padding: 5px;
+}
+
+.formContainer {
+    /*width:300px;*/
+    margin: auto;
+    padding: 20px;
+}
+
+div.formContainer span {
+    /*display:block;*/
+    font-weight: bold;
+}
+
+.validatori {
+    color: red;
+    font-weight: bold;
+}
+
+.dinamickiValidatori {
+    color: white;
+}
+
+.validationSummary {
+    text-align: left;
+    color: red;
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+nav ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 5px 20px;
+    }
+
+footer {
+    text-align: center;
+}
+
+.btnCtrl {
+    width: 85px;
+}
+
+.noBorderRadius {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.usernameBadge {
+    font-weight: normal;
+    background-color: #c2c9fd;
+    padding: 5px;
+}
+
+.title {
+    color: #000;
+    display: block;
+    font-size: 2em;
+    font-weight: 100;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 10px;
+}
+
+.tblPrikazOsoba {
+    margin: auto;
+    width: 100%;
+}
+
+    .tblPrikazOsoba td:last-of-type {
+        vertical-align: top;
+    }
+
+    .tblPrikazOsoba tr:not(:first-child) {
+        height: 80px;
+    }
+
+    .tblPrikazOsoba tr:not(:first-of-type) td:first-child {
+        font-weight: normal;
+    }
+
+    .tblPrikazOsoba ul {
+        padding: 0;
+    }
+
+        .tblPrikazOsoba ul li {
+            list-style: none;
+        }
+
+.urediOsobu {
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+#content_mojGV {
+    /*font-size:.8em;*/
+    width: 100%;
+}
+
+    #content_mojGV input,
+    #content_mojGV select {
+        width: 120px;
+        padding: 3px;
+        border: 1px solid #ccc;
+    }
+
+    #content_mojGV tr:first-child {
+        height: 30px;
+    }
+
+    #content_mojGV tr:not(:first-child) td:first-child {
+        font-weight: normal;
+    }

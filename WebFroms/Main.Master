@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="WebFroms.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Moj.css" rel="stylesheet" />
+    <link href="Content/OsobaCtrl.css" rel="stylesheet" />
+    <link href="Content/toastr.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/toastr.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div calss="container mainContainer">
+            <header>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 text-left">
+                        <h1><%: Page.Title.ToString() %></h1>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 text-right">
+                        <asp:HyperLink ID="MasterMail" CssClass="btn btn-success" runat="server" />
+                        <asp:LinkButton ID="MasterLogout" runat="server" CssClass="btn btn-warning" Text="<%$ Resources:Master, Logout %>" OnClick="MasterLogout_Click" />
+                    </div>
+               </div>
+                <hr />
+                <nav>
+                    <ul>
+                        <li>
+                            <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
