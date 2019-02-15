@@ -412,4 +412,4 @@
     } else {
         window['toastr'] = factory(window['jQuery']);
     }
-    }));
+}));
