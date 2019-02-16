@@ -20,7 +20,7 @@
             <header>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 text-left">
-                        <h1><%: Page.Title.ToString() %> Title</h1>
+                        <h1><%: Page.Title.ToString() %></h1>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 text-right">
                         <asp:HyperLink ID="MasterMail" CssClass="btn btn-success" runat="server" />
@@ -56,6 +56,7 @@
                         </li>
                     </ul>
                 </nav>
+                <hr />
             </header>
             <div class="row">
                 <asp:ContentPlaceHolder ID="Content" runat="server">
@@ -68,7 +69,7 @@
                     <%: DateTime.Now.ToLongDateString() %> | RWA - <a>WebForms</a> Project
                 </p>
                 <p>
-                    
+                    Repo - <asp:Label ID="lblCurentRepo" runat="server" CssClass="badge"/>
                 </p>
             </footer>
         </div>

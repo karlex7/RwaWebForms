@@ -69,6 +69,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\blue\blue.css" />
+    <Content Include="App_Themes\default\default.css" />
+    <Content Include="App_Themes\red\red.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -77,6 +80,7 @@
     <Content Include="Content\my-ultra-cool.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="Controls\EditPerson.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Main.Master" />
@@ -112,7 +116,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Master.en.resx</DependentUpon>
     </Compile>
+    <Compile Include="BLL\CityHandler.cs" />
+    <Compile Include="BLL\Handler.cs" />
     <Compile Include="BLL\PersonHandler.cs" />
+    <Compile Include="Controls\EditPerson.ascx.cs">
+      <DependentUpon>EditPerson.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditPerson.ascx.designer.cs">
+      <DependentUpon>EditPerson.ascx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\IRepo.cs" />
     <Compile Include="DAL\RepoDB.cs" />
     <Compile Include="DAL\RepoFactory.cs" />
@@ -130,6 +143,9 @@
     </Compile>
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Additional\MyPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
@@ -174,7 +190,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="App_LocalResources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Master.en.resx">
@@ -190,6 +205,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Add.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Setup.aspx.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

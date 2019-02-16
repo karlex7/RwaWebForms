@@ -13,6 +13,7 @@ namespace WebFroms.BLL
         public PersonHandler()
         {
             //tu setiram koji repo budem koristil preko MyPage
+            repo = Handler.GetRepo();
         }
         public bool AddPerson(Person p)
         {

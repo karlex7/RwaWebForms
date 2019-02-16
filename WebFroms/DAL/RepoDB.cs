@@ -35,12 +35,12 @@ namespace WebFroms.DAL
             return new Person
             {
                 IDPerson = Guid.Parse(row["IDPerson"].ToString()),
-                FirstName = row["FirstName"].ToString(),
+                FirstName = row["FristName"].ToString(),
                 Surname = row["Surname"].ToString(),
                 Telephone = row["Telephone"].ToString(),
                 Password = row["UserPassword"].ToString(),
                 Admin = bool.Parse(row["IsAdmin"].ToString()),
-                CityID = int.Parse(row["GradID"].ToString()),
+                CityID = int.Parse(row["CityID"].ToString()),
                 Emails = GetEmails(idPerosn)
             };
         }
@@ -68,12 +68,12 @@ namespace WebFroms.DAL
             {
                 Person p = new Person();
                 p.IDPerson = Guid.Parse(row["IDPerson"].ToString());
-                p.FirstName = row["FirstName"].ToString();
+                p.FirstName = row["FristName"].ToString();
                 p.Surname = row["Surname"].ToString();
                 p.Telephone = row["Telephone"].ToString();
-                p.Password = row["Password"].ToString();
+                p.Password = row["UserPassword"].ToString();
                 p.Admin = bool.Parse(row["IsAdmin"].ToString());
-                p.CityID = int.Parse(row["GradID"].ToString());
+                p.CityID = int.Parse(row["CityID"].ToString());
                 p.Emails = GetEmails(p.IDPerson);
                 persons.Add(p);
             }
