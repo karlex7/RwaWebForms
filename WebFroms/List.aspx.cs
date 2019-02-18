@@ -22,6 +22,9 @@ namespace WebFroms
         {
             GwPersons.DataSource = handler.personHandler.GetPersons();
             GwPersons.DataBind();
+
+            RepeaterPerson.DataSource = handler.personHandler.GetPersons();
+            RepeaterPerson.DataBind();
         }
 
         protected void GwPersons_RowEditing(object sender, GridViewEditEventArgs e)
@@ -57,6 +60,11 @@ namespace WebFroms
                 }
             }
             return default(T);
+        }
+
+        protected void RepeaterPerson_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+
         }
     }
 }

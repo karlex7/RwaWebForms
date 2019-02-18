@@ -8,7 +8,7 @@
             </td>
             <td>
                 <asp:TextBox ID="txtName" CssClass="form-control" runat="server" />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="First name is required!" ControlToValidate="txtName" Display="Dynamic" meta:resourcekey="RequiredFieldValidator1Resource1" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="MyValidationGroup" runat="server" ErrorMessage="First name is required!" ControlToValidate="txtName" Display="Dynamic" meta:resourcekey="RequiredFieldValidator1Resource1" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -17,7 +17,7 @@
             </td>
             <td>
                 <asp:TextBox ID="txtSurname" CssClass="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Surname is required!" ControlToValidate="txtSurname" Display="Dynamic" meta:resourcekey="RequiredFieldValidator2Resource1" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="MyValidationGroup" runat="server" ErrorMessage="Surname is required!" ControlToValidate="txtSurname" Display="Dynamic" meta:resourcekey="RequiredFieldValidator2Resource1" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -26,8 +26,8 @@
             </td>
             <td>
                 <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Email is required!" ControlToValidate="txtEmail" Display="Dynamic" meta:resourcekey="RequiredFieldValidator3Resource1" ForeColor="Red">*</asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Email is in wrong format!" ControlToValidate="txtEmail" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red">*</asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="MyValidationGroup" runat="server" ErrorMessage="Email is required!" ControlToValidate="txtEmail" Display="Dynamic" meta:resourcekey="RequiredFieldValidator3Resource1" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ValidationGroup="MyValidationGroup" runat="server" ErrorMessage="Email is in wrong format!" ControlToValidate="txtEmail" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red">*</asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -36,7 +36,7 @@
             </td>
             <td>
                 <asp:TextBox ID="txtTelephone" CssClass="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Telephone is required!" ControlToValidate="txtTelephone" Display="Dynamic" meta:resourcekey="RequiredFieldValidator4Resource1" ForeColor="Red">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup="MyValidationGroup" runat="server" ErrorMessage="Telephone is required!" ControlToValidate="txtTelephone" Display="Dynamic" meta:resourcekey="RequiredFieldValidator4Resource1" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -45,7 +45,7 @@
             </td>
             <td>
                 <asp:TextBox ID="txtPassword" CssClass="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Password is required!" ControlToValidate="txtPassword" Display="Dynamic" ForeColor="Red" meta:resourcekey="RequiredFieldValidator5Resource1"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ValidationGroup="MyValidationGroup" runat="server" ErrorMessage="Password is required!" ControlToValidate="txtPassword" Display="Dynamic" ForeColor="Red" meta:resourcekey="RequiredFieldValidator5Resource1"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -72,13 +72,13 @@
                 
             </td>
             <td>
-                <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-primary btn-sm btnCtrl" OnClick="btnEdit_Click" meta:resourcekey="btnEditResource1" />
-                <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-warning" OnClick="btnDelete_Click" meta:resourcekey="btnDeleteResource1" />
+                <asp:Button ID="btnEdit" runat="server" ValidationGroup="MyValidationGroup" Text="Edit" CssClass="btn btn-primary btn-sm btnCtrl" OnClick="btnEdit_Click" meta:resourcekey="btnEditResource1" />
+                <asp:Button ID="btnDelete" runat="server" ValidationGroup="MyValidationGroup" Text="Delete" CssClass="btn btn-warning" OnClick="btnDelete_Click" meta:resourcekey="btnDeleteResource1" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+                <asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="MyValidationGroup" runat="server" ForeColor="Red" />
             </td>
         </tr>
     </table>
