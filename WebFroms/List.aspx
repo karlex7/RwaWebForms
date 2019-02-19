@@ -77,7 +77,7 @@
                                 <itemtemplate>
                                     
                                     <tr>
-
+                                        <asp:Label ID="lblIDPerson" CssClass="hidden" runat="server" Text='<%# Eval("IDPerson") %>'/>
                                         <td>
                                             <%# Eval("FirstName") %>
                                         </td>
@@ -92,7 +92,10 @@
                                             <%# Eval("Admin") %>
                                         </td>
                                         <td>
-                                            <%# Eval("CityID") %>
+                                            <asp:Label ID="lblCity" runat="server" Text='<%# Eval("CityID") %>' CssClass="hidden"></asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:HyperLink runat="server" Text="Edit" CssClass="btn btn-primary"/>
                                         </td>
                                     </tr>
 
